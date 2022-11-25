@@ -25,13 +25,7 @@ function App() {
     )
   }
 
-  
-  useEffect(() => {
-    if (score === 5){
-     document.title = "end"
-    }
- })
-
+  const playing = () => {
   return (
     <div className="App">
       <div className='click'>
@@ -43,6 +37,44 @@ function App() {
       </div>
     </div>
   );
+}
+
+const endGame = () => {
+  return (
+    <div>
+      <h1>Game Over</h1>
+      <button className='button' onClick={() => setScore(0)}>Start Game</button>
+    </div>
+  )
+} 
+
+//   useEffect(() => {
+//     if (score === 5){
+//       return (<div>
+//         <h1>Game Over</h1>
+//       </div>
+//       )
+//     }
+//  })
+
+//   return (
+//     <div className="App">
+//       <div className='click'>
+//         <h1>Click a Mole</h1>
+//       </div>
+//       <div className=''>
+//         <b>{score}</b>
+//         {createMoleHill()}
+//       </div>
+//     </div>
+//   );
+
+return (
+  <div>
+    {(score === 10) ? endGame() : playing()}
+  </div>
+)
+
 }
 
 export default App;
