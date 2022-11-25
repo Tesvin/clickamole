@@ -1,5 +1,19 @@
 .App {
+  display: flex;
   text-align: center;
+  height: 100vh;
+}
+.click{
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  color: brown;
+}
+
+.mole {
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 .App-logo {
